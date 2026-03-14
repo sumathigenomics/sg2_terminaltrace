@@ -22,3 +22,38 @@ $$Q = -10 \log_{10}(P)$$
 (Where $P$ is the probability of an incorrect base call).
 3. Performance
 The script is optimized for I/O efficiency, utilizing buffered reading for compressed Gzip streams. It operates with $O(n)$ time complexity, where $n$ is the total number of reads.
+
+# SG2: TerminalTrace (v1.0.0)
+
+**High-speed terminal sequence motif analyzer for FASTQ data.**
+
+Developed by **DR Saminathan Sivaprakasham Murugesan** **Sumathi Genomics Co Ltd (Thailand)** | **Saminathan Industries Pte Ltd (Singapore)**
+
+---
+
+## Overview
+
+**SG2: TerminalTrace** is a specialized bioinformatics engine designed to characterize the fragmentation patterns of DNA. While its predecessor, **SG1**, focuses on high-performance genetic circuit design via CUDA, **SG2** provides a streamlined, memory-efficient approach to analyzing terminal sequence motifs.
+
+Terminal motifs (the sequence of bases at the ends of DNA fragments) are essential biomarkers in liquid biopsy and cell-free DNA (cfDNA) research. These motifs reflect enzymatic cleavage processes, providing insights into tissue-of-origin and disease states.
+
+---
+
+## Key Features
+
+* **Streaming Architecture:** Low memory footprint (<100MB) even for large datasets.
+* **Dual-End Tracking:** Analyzes 5' and 3' termini independently.
+* **Quality Gating:** Built-in Phred quality score filtering (Default Q20).
+* **Flexible k-mer Analysis:** User-definable motif lengths.
+
+---
+
+## Installation
+
+```bash
+# Clone the repository
+git clone [https://github.com/sumathigenomics/sg2_terminaltrace.git](https://github.com/sumathigenomics/sg2_terminaltrace.git)
+cd sg2_terminaltrace
+
+# Install dependencies
+pip install biopython
