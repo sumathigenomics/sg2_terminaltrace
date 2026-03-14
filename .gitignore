@@ -1,0 +1,5 @@
+__pycache__/
+*.fastq
+*.fastq.gz
+*.csv
+.DS_Store
